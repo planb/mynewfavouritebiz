@@ -1,0 +1,24 @@
+<% title "Friends Of #{@user.login}" %>
+<h1>Friends Of <% if @user == current_user %>Yours<% else %><%= @user.login %><% end %></h1>
+<% unless @friends.empty? %>
+	<% form_tag	accept_friendship_friends_path, :method => :put do %>	
+		<ul>
+		<% @friends.each do |friend| %>
+			<li><%= link_to friend.login, user_path(friend) %><% if @user == current_user %> | <%= link_to "Remove #{friend.login} from my friends list", friend_path(current_user, friend), :title => "Remove #{friend.login} from my friends list", :confirm => 'Are you sure?', :method => :delete %><% end %></li>
+		<% end %>
+		</ul>
+	<% end %>
+<% end %>
+<% if @user == current_user %>
+	<% unless @pending_friends.empty? && current_user == @user %>
+		<% form_tag	accept_friendship_friends_path, :method => :put do %>
+			<h2>Pending Friends</h2>
+			<ul>
+				<% @pending_friends.each do |pending_friend| %>
+					<li><%= link_to pending_friend.login, user_path(pending_friend), :title => "Visit #{pending_friend.login}&rsquo;s Profile" %> | Accept <%= pending_friend.login %>&rsquo;s Friend Request <%= check_box_tag "pending_friend_ids[]", pending_friend.id %></li>
+				<% end %>
+			</ul>
+			<%= submit_tag "Add To My Friends" %>
+		<% end %>
+	<% end %>
+<% end %>

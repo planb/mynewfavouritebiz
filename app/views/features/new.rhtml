@@ -1,0 +1,11 @@
+<% title "Add A New Feature" %>
+<h1><%= yield :title %></h1>
+
+<p>If there are any details about the business that you don&rsquo;t know, don&rsquo;t be afraid to leave it blank.</p>
+
+<%= error_messages_for :feature %>
+
+<% form_for(:feature, :url => features_path) do |f| %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+	<p><%= submit_tag "Create" %></p>
+<% end %>

@@ -1,0 +1,28 @@
+<% title "#{@user.login}&rsquo;s home page" %>
+<%= render :partial => "search/search" %><div id="last-businesses-rated-user">
+	<h2>Last Businesses Rated By <% if current_user == @user %>You<% else %><%= @user.login %><% end %></h2>
+	<% @businesses.each do |b| %>
+		<%= render :partial => "businesses/business", :locals => { :asset => b } %>
+	<% end %>
+	<%= will_paginate @businesses %>
+</div>
+<div id="user-details">
+	<h2><% if current_user == @user %>Your<% else %><%= @user.login + "&rsquo;s" %><% end %> Details</h2>
+	<ul>
+		<li>Screen Name: <%= @user.login %></li>
+		<% unless current_user.is_friends_or_pending_with?(@user) || @user == current_user %><li><%= link_to "Add #{@user.login} To My Friends", new_friend_path(@user), :title => "Add #{@user.login} To My Friends" %></li><% end %>
+		<% unless @user.gender.nil? %>
+		<li>Gender: <%= @user.gender %></li>
+		<% end %>
+		<% unless @user.suburb.nil? %>
+		<li>Location: <%= @user.suburb %></li>
+		<% end %>
+		<% if current_user == @user %><li><%= link_to "Edit My Details", edit_user_path(current_user) %></li><% end %>
+	</ul>
+	<h2>Friends</h2>
+	<% if @user == current_user %>
+		<p><%= link_to "You have #{@user.friends.length} friends", friends_path(@user), :title => "Visit Friends List" %></p>
+	<% else %>
+		<p><%= link_to "#{@user.login} has #{@user.friends.length} friends", friends_path(@user), :title => "Visit #{@user.login}&rsquo;s Friends List" %></p>
+	<% end %>
+</div>

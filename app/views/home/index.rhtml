@@ -1,0 +1,29 @@
+<h1 style="margin-bottom: -20px; margin-left: 2px;">Welcome all...</h1>
+
+<div class="corners-top">
+	<div class="corners-bottom">
+		<div class="corners-side">
+			<p id="intro">to a <b>democratic</b> world, a world of <b>enjoyable</b> shopping, dining, plumbing, car maintenance, video rentals, hotels, flights, car hire, flowers, furniture, gifts, banks, movies, taxis, bars, clubs, food &amp; drink, groceries, couriers, newsagents, music, gyms, phones...</p>
+		</div>
+	</div>
+</div>
+<br>
+<h1 style="margin-bottom: -20px; margin-left: 2px;">Find your new favourite biz...</h1>
+<%= render :partial => "search/search" %>
+<div id="welcome">
+	<div class="welcome-box">
+		<h2>Rate A Biz</h2>
+		<p>Add a new business, or, rate an existing one...</p>
+		<p><%= link_to "Go!", businesses_path, :title => "Search For A Business" %></p>
+	</div>
+	<div class="welcome-box">
+		<h2>Join Us!</h2>
+		<p>Become a member for free, and claim your little corner...</p>
+		<p><%= link_to "Go!", signup_path, :title => "Join MyNewFavourite.Biz" %></p>
+	</div>
+	<div class="welcome-box">
+		<h2>My Profile</h2>
+		<p>Cut the cues, and head straight for your proile now...</p>
+		<p><%= link_to "Go!", user_path(current_user), :title => "Login To Your Account" %></p>
+	</div>
+</div>

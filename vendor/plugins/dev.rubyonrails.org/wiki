@@ -1,0 +1,164 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>Rails Trac - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/trac/css/trac.css" type="text/css" /><link rel="stylesheet" href="/trac/css/wiki.css" type="text/css" /><link rel="icon" href="/chrome/common/trac.ico" type="image/x-icon" /><link rel="shortcut icon" href="/chrome/common/trac.ico" type="image/x-icon" /><link rel="alternate" href="/wiki/WikiStart?format=txt" title="Plain Text" type="text/x-trac-wiki" /><style type="text/css">@import url(/site/screen.css);
+</style>
+ <script type="text/javascript" src="/trac/js/trac.js"></script>
+</head>
+<body>
+<div id="TopNav">
+  <img src="http://www.rubyonrails.org/images/favicon.png" style="vertical-align: middle; border: none; margin-right: 5px"/>
+  <a href="http://www.rubyonrails.org/">Ruby on Rails</a> |
+  <a href="http://www.rubyonrails.org/screencasts">Screencasts</a> |
+  <a href="http://www.rubyonrails.org/down">Download</a> |
+  <a href="http://www.rubyonrails.org/docs">Documentation</a> |
+  <a href="http://weblog.rubyonrails.org">Weblog</a> |
+  <a href="http://www.rubyonrails.org/community">Community</a> |
+  <a href="http://dev.rubyonrails.org">Source</a>
+</div>
+
+<div id="banner">
+
+<div id="header"><h1><a href="http://dev.rubyonrails.org/">Rails Trac</a></h1></div>
+
+<form id="search" action="/search" method="get">
+ <div>
+  <label for="proj-search">Search:</label>
+  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
+  <input type="submit" value="Search" />
+  <input type="hidden" name="wiki" value="on" />
+  <input type="hidden" name="changeset" value="on" />
+  <input type="hidden" name="ticket" value="on" />
+ </div>
+</form>
+
+
+
+<div id="metanav" class="nav"><ul><li class="first"><a href="/login">Login</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li><a href="/about">About Trac</a></li><li class="last"><a href="/register">Register</a></li></ul></div>
+</div>
+
+<div id="mainnav" class="nav"><ul><li class="active first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li><a accesskey="3" href="/roadmap">Roadmap</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li class="last"><a accesskey="4" href="/search">Search</a></li></ul></div>
+<div id="main">
+
+
+
+
+<div id="ctxtnav" class="nav">
+ <h2>Wiki Navigation</h2>
+ <ul>
+   <li><a href="/wiki">Start Page</a></li>
+   <li><a href="/wiki/TitleIndex">Index by Title</a></li>
+   <li><a href="/wiki/RecentChanges">Index by Date</a></li>
+   <li class="last"><a href="/wiki/WikiStart?action=diff&amp;version=33">Last Change</a></li>
+ </ul>
+ <hr />
+</div>
+
+<div id="content" class="wiki">
+
+ 
+  
+  
+   
+   <div class="wikipage">
+    <div id="searchable"><h2 id="Checkingoutthesource">Checking out the source</h2>
+<p>
+The Subversion repository resides at <a class="ext-link" href="http://svn.rubyonrails.org/rails"><span class="icon">http://svn.rubyonrails.org/rails</span></a>
+</p>
+<p>
+Check out the current development trunk (Edge Rails) with:
+</p>
+<blockquote>
+<p>
+<strong><tt>svn co http://svn.rubyonrails.org/rails/trunk</tt></strong>
+</p>
+</blockquote>
+<p>
+If you'd rather work with Rails' stable branch:
+</p>
+<blockquote>
+<p>
+<tt>svn co http://svn.rubyonrails.org/rails/branches/1-2-stable</tt>
+</p>
+</blockquote>
+<h2 id="Creatingaticket">Creating a ticket</h2>
+<p>
+This Trac is for dealing with bug reports and patches. We do not use it for feature requests any more. If you have a feature request, please read the next section on how to fulfill it on your own.
+</p>
+<h2 id="Creatingabugreport">Creating a bug report</h2>
+<p>
+When creating a bug report, be sure to include as much relevant information as possible. Post the code sample that causes the problem. Preferably, alter the unit tests and show through either changed or added tests how the expected behavior is not occuring.
+</p>
+<p>
+Security vulnerabilities should be reported via an email to security@rubyonrails.org, do <strong>not</strong> use trac for reporting security vulnerabilities.  All content in trac is publicly available as soon as it is posted.
+</p>
+<p>
+Then don't get your hopes up. Unless you have a "Code Red, Mission Critical, The World is Coming to an End" kinda bug, you're creating this ticket in the hope that others with the same problem will be able to collaborate with you on solving it. Do not expect that the ticket automatically will see any activity or that others will jump to fix it. Creating a ticket like this is mostly to help yourself start on the path of fixing the problem and for others to sign on to with a "I'm having this problem too".
+</p>
+<h2 id="Creatingapatch">Creating a patch</h2>
+<p>
+Bug reports are fine, but patches are great. If you want to modify Rails or fix a bug you've run across, there's no faster way to make it happen than to do it yourself. Rails thrives on the generous work of contributors from around the world. Please become one of them.
+</p>
+<ol><li><strong>Get Rails ready for patching</strong>
+<ol><li>Check out the latest source: <tt>svn co http://svn.rubyonrails.org/rails/trunk</tt>
+</li><li>Ensure that the existing unit tests pass.
+</li></ol></li><li><strong>Make a test-driven change</strong>
+<ol><li>Add or change unit tests to prove that your change works.
+</li><li>Make the change to the source.
+</li><li>Verify that all tests pass by running <strong><tt>rake</tt></strong>. Run tests for a specific database using, for example, <tt>rake test_oracle</tt>.  See <tt>rake --tasks</tt> for more.
+</li></ol></li><li><strong>Update or add documentation</strong>
+<ol><li>If you're adding a new feature, please make sure to write documentation for it as well. Include a handful of examples too.
+</li><li>If you're changing a feature, please make sure to update the documentation for it as well. Include writing new examples.  
+</li></ol></li><li><strong>Share your well-tested change</strong>
+<ol><li>Sanity check the changes you've made: <tt>svn status</tt>
+</li><li>Create a patch: <tt>svn diff &gt; my_descriptively_named_patch.diff</tt>
+</li><li><a href="/login">Login</a> to Trac or <a href="/register">register</a> a new user.
+</li><li><a href="/newticket">Create a new ticket</a> with [PATCH] as the first word in the summary. Attach your patch file.
+</li></ol></li><li><strong>Get your patch accepted</strong>
+<ol><li>Keep an eye on the ticket and address concerns that arise. Make your change hard <strong>not</strong> to commit.
+</li><li>Get three people to try out your patch and endorse it with +1 in the comments, then attach the Verified keyword. You can fish for collaborators in #rails-contrib on IRC (<a class="ext-link" href="irc://irc.freenode.net/rails-contrib"><span class="icon">irc://irc.freenode.net/rails-contrib</span></a>) and the rubyonrails-core mailing list (<a class="ext-link" href="http://groups.google.com/group/rubyonrails-core"><span class="icon">http://groups.google.com/group/rubyonrails-core</span></a>).
+</li><li>Expect your ticket to be closed with an untested, undocumented, or incomplete resolution if it's missing tests, documentation, or implementation. Don't panic; the ticket hasn't been killed! These resolutions are the pathway to commit. Update your patch and reopen the ticket.
+</li></ol></li><li><strong>Bask in the glory of being a Rails contributor! </strong>
+</li></ol><p>
+  
+</p>
+<h2 id="Sourcestyle">Source style</h2>
+<ul><li>Two spaces, no tabs
+</li><li>Don't use <strong><tt>and</tt></strong> and <strong><tt>or</tt></strong> for boolean tests, instead always use <strong><tt>&amp;&amp;</tt></strong> and <strong><tt>||</tt></strong>
+</li><li><tt>MyClass.my_method(my_arg)</tt> -- not <tt>my_method( my_arg )</tt> or <tt>my_method my_arg</tt>
+</li><li>Follow the conventions you see used in the source already
+</li></ul></div>
+   </div>
+   
+  
+  <script type="text/javascript">
+   addHeadingLinks(document.getElementById("searchable"), "Link to this section");
+  </script>
+ 
+ 
+</div>
+
+<script type="text/javascript">searchHighlight()</script>
+<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/wiki/WikiStart?format=txt">Plain Text</a></li></ul></div>
+
+</div>
+
+<div id="footer">
+ <hr />
+ <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/trac/trac_logo_mini.png" height="30" width="107"
+   alt="Trac Powered"/></a>
+ <p class="left">
+  Powered by <a href="/about"><strong>Trac 0.10.5dev</strong></a><br />
+  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+ </p>
+ <p class="right">
+  Visit the Ruby on Rails project at<br /><a href="http://rubyonrails.org/">http://rubyonrails.org/</a>
+ </p>
+</div>
+
+
+ </body>
+</html>
+

@@ -1,0 +1,28 @@
+<% title "Feature List" %>
+<h1><%= yield :title %></h1>
+<p>Here is a list of the features that have been introduced to MyNewFavourite.biz</p>
+<% unless @completed_features.empty? %>
+	<ul id="completed-features-list">
+		<% @completed_features.each do |feature| %>
+			<li><%= feature.name %>, Added <%= feature.completed_at.to_s(:short) %></li>
+		<% end %>
+	</ul>
+<% end %>
+<p>And here is the list of proposed features.  If you like an idea click the idea and rate it, that way we will know what feature to implement the quickest.  If you can think of something that is not on the list <%= mail_to "feature_suggestions@mynewfavourite.biz", "please don&rsquo;t hesitate to let us know!", :title => "Feature Suggestions Email", :encode => "javascript", :subject => "I have a suggestion..." %></p>
+<% unless @proposed_features.empty? %>
+	<% form_tag completed_features_path, :method => :put do %>
+		<% @proposed_features.each do |feature| %>
+			<div class="<%= cycle :odd, :even %>">
+				<h3><%= feature.name %></h3>
+				<%= render :partial => "rating/current_rating", :locals => { :asset => feature } %>
+				<p>As voted by <%= feature.ratings.size %> <% unless feature.ratings.size == 1 %> people<% else %> person<% end %></p>
+				<p><%= feature.description %></p>
+				<div id="rate-feature">
+					<%= render :partial => "rate_feature", :locals => { :asset => feature } %>
+				</div>
+				<% if admin? %><p>Excuse me sir, I am complete: <%= check_box_tag "feature_ids[]", feature.id %></p><% end %>
+			</div>
+		<% end %>
+		<% if admin? %><p><%= submit_tag "Mark As Completed" %></p><% end %>
+	<% end %>
+<% end %>

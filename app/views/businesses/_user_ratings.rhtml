@@ -1,0 +1,7 @@
+<dl>
+	<% @business.ratings.each do |rating| %>
+	<dt><%= link_to "#{rating.user.login}&rsquo;s Rating", user_path(rating.user) %></dt>
+	<dd><%= rating.created_at.to_s(:short) %></dd>
+	<dd><%= render :partial => "rating/current_rating", :locals => { :asset => rating } %></dd>
+	<% end %>
+</dl>

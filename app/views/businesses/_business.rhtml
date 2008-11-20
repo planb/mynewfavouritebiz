@@ -1,0 +1,16 @@
+<div<% if @something == 1 %> id="the-business"<% end %> class="business-details <%= cycle :odd, :even %>">
+	<h3><%= link_to asset.name, business_path(asset), :title => asset.name %><% if admin? %> &rarr; <%= link_to 'Edit', edit_business_path(asset), :title => "Edit #{asset.name}" %> | <%= link_to 'Destroy', business_path(asset), :title => "Destroy #{asset.name}", :confirm => 'Are you sure?', :method => :delete %><% end %></h3>
+	<%= render :partial => "rating/current_rating", :locals => { :asset => asset } %>
+	<ul class="business-contact-details">
+		<% unless asset.suburb.nil? %><li><%= asset.street %> <%= link_to asset.suburb, "/search?location=#{asset.suburb}", :title => "Search For All Businesses In #{asset.suburb}" %> <%= asset.postcode %></li><% end %>
+		<% unless asset.phone %><li><%= asset.phone %></li><% end %>
+		<% unless asset.url.nil? %><li><%= link_to asset.url, asset.url, :title => "Visit #{asset.name}&rsquo;s Website" %></li><% end %>
+		<% unless asset.tag_list.empty? %>
+			<li>Categories: 
+			<% asset.tag_list.names.each do |tag_name| %>
+				<%= link_to tag_name, "/search?tag=#{tag_name}", :title => "Search For All Businesses In #{tag_name}" %>
+			<% end %>
+			</li>
+		<% end %>
+	</ul>
+</div>

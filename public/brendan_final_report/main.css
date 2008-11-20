@@ -1,0 +1,135 @@
+body {
+	color: #727272;
+	font-family: tahoma;
+	font-size: .8em;
+	line-height: 1.5em;
+	background-color: #727272;
+	}
+
+img {
+	border: none;
+	}
+
+a {
+	color:orange;
+	}
+
+h1 {
+	font-size: 1.2em;
+	text-decoration: none;
+	}
+
+#rightside {
+	position: absolute;
+	left: 710px;
+	top: 245px;
+	width: 240px;
+}
+
+#container {
+	position:absolute;
+	left:50%;
+	margin-left: -492px;
+	top:0px;
+	width:984px;
+	height: 2300px;
+	background-image: url("images/background.png");
+
+}
+
+#content {
+	position: absolute;
+	left: 374px;
+	top: 240px;
+	width: 300px;
+}
+
+#Slice1_ {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:984px;
+	height:123px;
+background-image: url("images/Slice1.png");
+}
+
+#Slice2_ {
+	position:absolute;
+	left:0px;
+	top:123px;
+	width:984px;
+	height:99px;
+background-image: url("images/Slice2.png");
+}
+
+#Slice3_ {
+	position:absolute;
+	left:0px;
+	top:222px;
+	width:984px;
+	height:21px;
+background-image: url("images/Slice3.png");
+}
+
+#Slice4_ {
+	position:absolute;
+	left:0px;
+	top:243px;
+	width:39px;
+	height:379px;
+background-image: url("images/Slice4.png");
+}
+
+#Slice5_ {
+	position:absolute;
+	left:39px;
+	top:243px;
+	width:306px;
+	height:40px;
+background-image: url("images/Slice5.png");
+}
+
+#Slice6_ {
+	position:absolute;
+	left:345px;
+	top:243px;
+	width:639px;
+	height:379px;
+background-image: url("images/Slice6.png");
+}
+
+#Slice7_ {
+	position:absolute;
+	left:39px;
+	top:283px;
+	width:306px;
+	height:39px;
+background-image: url("images/Slice7.png");
+}
+
+#Slice8_ {
+	position:absolute;
+	left:39px;
+	top:322px;
+	width:306px;
+	height:40px;
+background-image: url("images/Slice8.png");
+}
+
+#Slice9_ {
+	position:absolute;
+	left:39px;
+	top:362px;
+	width:306px;
+	height:40px;
+background-image: url("images/Slice9.png");
+}
+
+#Slice10_ {
+	position:absolute;
+	left:39px;
+	top:402px;
+	width:306px;
+	height:220px;
+background-image: url("images/Slice10.png");
+}

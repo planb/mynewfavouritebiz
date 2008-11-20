@@ -1,0 +1,8 @@
+<% title "Categories For #{@business.name}" %>
+<% unless @business.tag_list.empty? %>
+	<h2>No Categories For <%= @business.name %></h2>
+	<%= link_to "Add New Categories", new_tag_path(@business), :title => "Add New Categories" %>
+<% else %>
+	<h2>Categories For <%= @business.name %></h2>
+	<p><%= @business.tag_list %></p>
+<% end %>

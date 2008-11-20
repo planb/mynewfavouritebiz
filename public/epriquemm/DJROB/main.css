@@ -1,0 +1,159 @@
+body {
+	color: #93fbff;
+	font-family: sans-serif;
+	font-size: .8em;
+	line-height: 1.5em;
+	background-color: #0e2541;
+	}
+
+img {
+	border: none;
+	}
+
+a {
+	color:orange;
+	}
+
+h1 {
+	font-size: 1.2em;
+	text-decoration: none;
+	}
+
+#content {
+	position: absolute;
+	left: 376px;
+	top: 100px;
+	width: 300px;
+	height: 300px;
+	}
+
+
+div.Table_01 {
+	position:absolute;
+	left:50%;
+	margin-left: -380px;
+	margin-top: -240px;
+	top:50%;
+	width:760px;
+	height:480px;
+}
+
+div.index-01_ {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:347px;
+	height:168px;
+background-image: url("images/index_01.png");
+}
+
+div.index-02_ {
+	position:absolute;
+	left:347px;
+	top:0px;
+	width:368px;
+	height:410px;
+background-image: url("images/index_02.png");
+}
+
+div.index-03_ {
+	position:absolute;
+	left:715px;
+	top:0px;
+	width:45px;
+	height:480px;
+background-image: url("images/index_03.png");
+}
+
+div.index-04_ {
+	position:absolute;
+	left:0px;
+	top:168px;
+	width:347px;
+	height:312px;
+background-image: url("images/index_04.png");
+}
+
+div.index-05_ {
+	position:absolute;
+	left:347px;
+	top:410px;
+	width:19px;
+	height:70px;
+background-image: url("images/index_05.png");
+}
+
+div.index-06_ {
+	position:absolute;
+	left:366px;
+	top:410px;
+	width:109px;
+	height:35px;
+	background-image: url("images/nonselect_06.png");
+}
+
+div.index-07_ {
+	position:absolute;
+	left:475px;
+	top:410px;
+	width:60px;
+	height:35px;
+	background-image: url("images/nonselect_07.png");
+}
+
+div.index-08_ {
+	position:absolute;
+	left:535px;
+	top:410px;
+	width:101px;
+	height:35px;
+	background-image: url("images/nonselect_08.png");
+}
+
+div.index-06_ a:hover {
+	position:absolute;
+	background-image: url("images/index_06.png");
+
+}
+
+div.index-07_ a:hover {
+	position:absolute;
+	background-image: url("images/index_07.png");
+
+}
+
+
+div.index-08_ a:hover {
+	position:absolute;
+	background-image: url("images/index_08.png");
+	
+}
+
+
+div.index-09_ {
+	position:absolute;
+	left:636px;
+	top:410px;
+	width:79px;
+	height:35px;
+	background-image: url("images/nonselect_09.png");
+}
+
+div.index-09_ a:hover {
+	position:absolute;
+	background-image: url("images/index_09.png");
+	width: 79px;
+}
+
+div.index-10_ {
+	position:absolute;
+	left:366px;
+	top:445px;
+	width:349px;
+	height:35px;
+	background-image: url("images/index_10.png");
+}
+
+img {
+	border: none;
+	}

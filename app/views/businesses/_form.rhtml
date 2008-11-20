@@ -1,0 +1,21 @@
+<dl>
+	<dt><label for="business_name">Business Name: </label></dt>
+	<dd><%= f.text_field :name %></dd>
+	<dt><label for="business_street">Street Address: </label></dt>
+	<dd><%= f.text_field :street %></dd>
+	<dt><label for="business_suburb">Suburb: </label></dt>
+	<dd><%= f.text_field :suburb %></dd>
+	<dt><label for="business_postcode">Postcode: </label></dt>
+	<dd><%= f.text_field :postcode %></dd>
+	<dt><label for="business_phone">Phone: </label></dt>
+	<dd><%= f.text_field :phone %></dd>
+	<dt><label for="business_email">Email: </label></dt>
+	<dd><%= f.text_field :email %></dd>
+	<dt><label for="business_url">URL: </label></dt>
+	<dd><%= f.text_field :url %></dd>
+	<dt><label for="business_tag_list">Categories: </label></dt>
+	<dd><%= f.text_field :tag_list %></dd>
+	<dd class="form-note" id="help_tag_list">
+		<p>Please add some categories to the business.  To add multiple categories please comma separate entries.  Eg fish, bowl, house</p>
+	</dd>
+</dl>

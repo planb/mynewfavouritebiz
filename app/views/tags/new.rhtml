@@ -1,0 +1,10 @@
+<% title "Create New Categories" %>
+<%= error_messages_for :tag %>
+
+<% form_for :tag, :url => tags_path(@tag) do |f| -%>
+<dl>
+	<dt><label for="tag_name">Category: </label></dt>
+	<dd><%= f.text_field :name %></dd>
+</dl>
+<p><%= submit_tag 'Add Categories' %></p>
+<% end -%>

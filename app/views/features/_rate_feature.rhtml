@@ -1,0 +1,7 @@
+<% unless asset.rated_by_user?(current_user) %>
+	<p>Would you like to see this feature included and if so how badly?</p>
+	<%= render :partial => "rating/rate_feature", :locals => { :asset => asset } %>
+<% else %>
+	<p>You have already rated, you gave it</p>
+	<%= render :partial => "rating/current_rating", :locals => { :asset => asset } %>
+<% end %>

@@ -1,0 +1,2 @@
+page.replace_html "star-ratings-block-rate", :partial => 'rating/rate_feature', :locals => { :asset => @feature }
+page.replace_html "rate-feature", :partial => "features/rate_feature", :locals => { :asset => @feature }

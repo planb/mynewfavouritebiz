@@ -1,0 +1,9 @@
+<% title "Search Results" %>
+<%= render :partial => "search/search" %>
+<% @businesses.each do |b| %>
+	<%= render :partial => "businesses/business", :locals => { :asset => b } %>
+<% end %>
+<%= will_paginate @businesses %>
+<div class="gray-box">
+	<p>Didn&rsquo;t find the business that you were looking for?  Please <%= link_to "add the business to our records!", new_business_path, :title => "Add New Business" %></p>
+</div>

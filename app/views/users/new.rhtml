@@ -1,0 +1,28 @@
+<% title "Members Login" %>
+<% body 'onload="loadFormHelp();"' %>
+<%= error_messages_for :user %>
+<% form_for :user, :url => users_path do |f| -%>
+<dl>
+	<dt><label for="user_login">Login: </label></dt>
+	<dd><%= f.text_field :login %></dd>
+	<dd class="form-note" id="help_login">
+		<p>You&rsquo;re &lsquo;login&rsquo; is your nic name one our site.  Please choose something unique.</p>
+	</dd>
+	<dt><label for="user_email">Email: </label></dt>
+	<dd><%= f.text_field :email %></dd>
+	<dd class="form-note" id="help_email">
+		<p>Please use a valid email address.  If you lose your password or request a new one this email address will be the one the new password is sent to.</p>
+	</dd>
+	<dt><label for="user_password">Password: </label></dt>
+	<dd><%= f.password_field :password %></dd>
+	<dd class="form-note" id="help_password">
+		<p>You will need this password to log back into the site.  It must be at least 3 characters long.</p>
+	</dd>
+	<dt><label for="user_password_confirmation">Confirm Password: </label></dt>
+	<dd><%= f.password_field :password_confirmation %></dd>
+	<dd class="form-note" id="help_password_confirmation">
+		<p>Please re-type you&rsquo;re password to ensure that you spelt it correctly.</p>
+	</dd>
+</dl>
+<p><%= submit_tag 'Sign up' %></p>
+<% end -%>

@@ -1,0 +1,12 @@
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  timeout: 5000
+
+production:
+  adapter: mysql
+  database: mnfb_production
+  username: mnfb
+  password: socialbusinessapp
+  host: mysql.mynewfavourite.biz
+  port: 3306

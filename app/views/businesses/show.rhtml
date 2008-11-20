@@ -1,0 +1,15 @@
+<% title h @business.name %>
+<% @something = 1 %>
+<%= render :partial => "businesses/business", :locals => { :asset => @business } %>
+<%= render :partial => "number_of_reviews" %>
+<div id="user-ratings">
+	<%= render :partial => "user_ratings" %>
+</div>
+<div id="write-review">
+	<% unless @business.rated_by_user?(current_user) %>
+		<p>You have not yet rated this business.</p>
+	<% else %>
+		<p>You have already rated this business.  Rate again?</p>
+	<% end %>
+	<%= render :partial => "rating/rate_business", :locals => { :asset => @business } %>
+</div>

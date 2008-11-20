@@ -1,0 +1,3 @@
+<div id="display-user">
+	<p><% if logged_in? %>hello <%= link_to "#{h current_user.login}", user_path(current_user) %> (<%= link_to 'logout?', logout_path, :title => "logout" %>)<% else %>hello guest, <%= link_to 'login', login_path, :title => "login" %> or <%= link_to 'signup', signup_path, :title => "signup" %><% end %></p>
+</div>

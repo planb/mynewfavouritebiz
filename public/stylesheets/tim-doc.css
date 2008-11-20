@@ -1,0 +1,9 @@
+#hi-ho-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#hi-ho-nav li {
+	display: inline;
+}

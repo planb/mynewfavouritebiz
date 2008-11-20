@@ -1,0 +1,4 @@
+page.replace_html "star-ratings-block-rate", :partial => 'rating/rate_business', :locals => { :asset => @business } 
+page.replace_html "user-ratings", :partial => 'businesses/user_ratings'
+page.replace_html "the-business", :partial => 'businesses/business', :locals => { :asset => @business }
+page.replace_html "number-of-reviews", :partial => 'businesses/number_of_reviews'

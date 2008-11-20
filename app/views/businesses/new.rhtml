@@ -1,0 +1,12 @@
+<% title "Create A New Business" %>
+<% body 'onload="loadFormHelp();"' %>
+<h1><%= yield :title %></h1>
+<div class="gray-box">
+	<p>If there are any details about the business that you don&rsquo;t know, don&rsquo;t be afraid to leave it blank.</p>
+</div>
+<%= error_messages_for :business %>
+
+<% form_for(:business, :url => businesses_path) do |f| %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+	<p><%= submit_tag "Create" %></p>
+<% end %>

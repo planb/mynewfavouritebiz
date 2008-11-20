@@ -1,0 +1,13 @@
+<div class="corners-top">
+	<div class="corners-bottom">
+		<div class="corners-side">
+			<div id="search">
+				<p>Search for your new favourite biz here... Simply type what your after and where and we'll instantly return you a list of the <em>best</em> business available for your selection...</p>
+				<% form_tag search_path, :method => 'get' do %>
+				<h2>Find me a good <label for="tag"><%= text_field_tag :tag, params[:tag] %></label> in <label for="location"><%= text_field_tag :location, params[:location] %></label>
+				<%= submit_tag "Search", :name => nil %></h2>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
